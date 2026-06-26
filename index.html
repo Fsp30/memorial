@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memorial — Filipe</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<div id="snake-widget">
+  <div id="snake-header">
+    <span id="snake-title">snake.exe</span>
+    <span id="snake-score">score: 0</span>
+  </div>
+  <canvas id="snake-canvas" width="420" height="420"></canvas>
+  <div id="snake-footer">
+    <span id="snake-status">pressione ↑ para iniciar</span>
+  </div>
+</div>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <div class="nav-logo">
+                <span class="nav-logo-bracket">{</span>
+                <span class="nav-logo-name">Filipe</span>
+                <span class="nav-logo-bracket">}</span>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio" class="nav-link active" data-section="inicio">Início</a></li>
+                <li><a href="#familia" class="nav-link" data-section="familia">Família</a></li>
+                <li><a href="#escola" class="nav-link" data-section="escola">Escola</a></li>
+                <li><a href="#fe" class="nav-link" data-section="fe">Fé</a></li>
+                <li><a href="#academico" class="nav-link" data-section="academico">Acadêmico</a></li>
+                <li><a href="#relacionamentos" class="nav-link" data-section="relacionamentos">Relações</a></li>
+                <li><a href="#visao" class="nav-link" data-section="visao">Quem eu sou?</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-avatar">
+            <div class="avatar-ring">
+                <div class="avatar-inner">F</div>
+            </div>
+            <p class="sidebar-name">Filipe</p>
+            <p class="sidebar-role">Estudante · Desenvolvedor · Futuro Docente</p>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#inicio" class="slink active">
+                <span class="slink-dot"></span> Início
+            </a>
+            <a href="#familia" class="slink">
+                <span class="slink-dot"></span> Família
+            </a>
+            <a href="#escola" class="slink">
+                <span class="slink-dot"></span> Escola & Formação
+            </a>
+            <a href="#fe" class="slink">
+                <span class="slink-dot"></span> Fé & Espiritualidade
+            </a>
+            <a href="#academico" class="slink">
+                <span class="slink-dot"></span> Vida Acadêmica
+            </a>
+            <a href="#relacionamentos" class="slink">
+                <span class="slink-dot"></span> Relacionamentos
+            </a>
+            <a href="#visao" class="slink">
+                <span class="slink-dot"></span> Who I am?
+            </a>
+        </nav>
+        <div class="sidebar-quote">
+            <p>"A identidade não é um destino.<br>É uma construção contínua."</p>
+        </div>
+    </aside>
+
+    <!-- MAIN WRAPPER -->
+    <div class="layout">
+
+        <!-- HERO -->
+        <section class="hero" id="inicio">
+            <div class="hero-bg-grid"></div>
+            <div class="hero-content">
+                <div class="hero-tag">Memorial Pessoal</div>
+                <h1 class="hero-title">
+                    Quem eu sou <br />
+                    <span class="hero-title-accent">e o que me tornou isso.</span>
+                </h1>
+                <p class="hero-sub">
+                    Este memorial não é uma lista de conquistas. É uma tentativa honesta de
+                    olhar para trás e entender os fios invisíveis que me trouxeram até aqui —
+                    a família que me formou, as escolhas que me definiram, as crenças que me
+                    sustentaram e os sonhos que ainda me movem. Coloquei um jogunho para se distrair quando a leitura
+                    estiver chata (só funciona quando estiver no computador). O codigo deste memorial está publico no github pages.
+                </p>
+                <div class="hero-chips">
+                    <span class="chip chip-amber">Família</span>
+                    <span class="chip chip-teal">Tecnologia</span>
+                    <span class="chip chip-purple">Fé</span>
+                    <span class="chip chip-coral">Quem sou eu</span>
+                </div>
+                <button class="btn-hero"
+                    onclick="document.getElementById('familia').scrollIntoView({behavior:'smooth'})">
+                    Começar a leitura ↓
+                </button>
+            </div>
+            <div class="hero-scroll-hint">
+                <div class="scroll-line"></div>
+                <span>role para explorar</span>
+            </div>
+        </section>
+
+        <!-- TIMELINE INTRO -->
+        <section class="section-intro">
+            <div class="container">
+                <div class="intro-grid">
+                    <div class="intro-card" data-modal="objetivo">
+                        <div class="intro-card-icon">◎</div>
+                        <h3>O objetivo deste memorial</h3>
+                        <p>Entender por que sou quem sou e por que estou assim.</p>
+                        <button class="card-read-more">Ler mais →</button>
+                    </div>
+                    <div class="intro-card" data-modal="metodologia">
+                        <div class="intro-card-icon">◈</div>
+                        <h3>Como eu me vejo</h3>
+                        <p>E uma pergunta: por que me vejo assim?</p>
+                        <button class="card-read-more">Ler mais →</button>
+                    </div>
+                    <div class="intro-card" data-modal="fio">
+                        <div class="intro-card-icon">◇</div>
+                        <h3>Por que HTML?</h3>
+                        <p>Dentre todas as formas possíveis, por que uma página web?</p>
+                        <button class="card-read-more">Ler mais →</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAMÍLIA -->
+        <section class="section" id="familia">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">01</div>
+                    <h2 class="section-title">Família</h2>
+                    <p class="section-sub">Temos que ter um inicio no fim das contas.</p>
+                </div>
+                <div class="text-block">
+                    <p class="drop-cap">
+                        Toda história começa antes de nós. A minha começa em uma cidade chamada Tabuleiro, cerca de 1
+                        hora e 20 minutos de carro daqui de Juiz de Fora, se você, obviamente, não andar sempre abaixo
+                        do limite da via (em um trecho em frente ao campo experimental da Embrapa, em Coronel Pacheco,
+                        que tem por volta de 3,6 km em duas retas e o limite é de 40 km/h, ninguém respeita;
+                        provavelmente a média do trecho, fora dos radares, é de 120 km/h). Meus pais vêm de uma família
+                        extremamente humilde, daquelas que, se o IBGE fizesse uma pesquisa quando eles ainda moravam com
+                        os pais, seriam classificados no nível de extrema pobreza. Ambos vieram de um distrito chamado
+                        Igrejinha do Acácio. O lugar tinha até Instagram, mas acabaram deletando a conta por problemas
+                        entre os próprios moradores
+                        <a href="https://www.instagram.com/reel/DLoBU0YvNYa/" target="_blank">(link do Instagram com
+                            algumas fotos que um visitante fez)</a>,
+                        um lugar muito agradável para esquecer do mundo e, no meu caso, dos computadores. Gosto de
+                        brincar que moravam 200 pessoas lá; depois que meus pais saíram, ficaram 198. Apesar da beleza e
+                        do aconchego de lugares assim, sempre é bom lembrar que a vida na roça não é fácil e,
+                        consequentemente, a vida deles também não foi. As experiências que viveram lá influenciaram
+                        bastante a minha criação, apesar de eu ter nascido em Juiz de Fora. Se fosse definir os dois,
+                        diria que meu pai é um pouco mais cético, extremamente cabeça-dura e não demonstra carinho de
+                        forma convencional. Já a minha mãe é bem mais emotiva e sempre demonstrou o típico carinho de
+                        mãe. Apesar de meu pai ser mais cético, minha mãe costuma pensar mais antes de agir. Ambos
+                        tiveram muita dificuldade nos estudos: minha mãe concluiu o ensino médio por meio do EJA já com
+                        cerca de 38 ou 39 anos, e meu pai não concluiu o Ensino Fundamental I. Porém, ambos sempre se
+                        esforçaram e fizeram o necessário para que eu e meus irmãos estudássemos.
+                    </p>
+
+                    <p>
+                        Tenho três irmãos e sou o caçula entre eles. Temos uma diferença considerável de idade, sendo o
+                        mais velho 12 anos mais velho do que eu. Cada um deles parece um retrato da mistura dos meus
+                        pais, com pequenas distinções. Eles dizem que, dentre todos os irmãos, sou o que mais passa
+                        tempo com meu pai. Entretanto, isso não faz com que eu me pareça mais com ele, mesmo passando
+                        consideravelmente mais tempo ao lado dele do que da minha mãe. Se eu fosse dizer o que cada
+                        irmão me ensinou: o mais velho talvez tenha sido em quem mais me espelhei para aprender a ter
+                        paciência, e o fato de eu estar na área de tecnologia hoje tem influência dele. A segunda mais
+                        velha me ensinou a cuidar dos outros, muito porque, quando meus pais iam trabalhar e o mais
+                        velho estudava à noite e trabalhava durante o dia, era ela quem cuidava de mim e da segunda mais
+                        nova. Esta segunda mais nova é quem mora comigo até hoje e, apesar de eu discordar de várias
+                        atitudes dela, ela me ensinou a olhar para o meu futuro de uma forma diferente. Ela mostra que é
+                        importante ajudar os outros, mas que eu também preciso seguir a minha própria vida.
+                    </p>
+
+                    <p>
+                        Minha família nunca foi um exemplo de convivência. Em muitos momentos, as coisas ficaram
+                        extremamente tensas, quase sempre envolvendo os meus pais, já que as brigas que tive ou
+                        presenciei com meus irmãos eram apenas por problemas pontuais, sem ressentimentos ou algo do
+                        tipo. Quando conversamos, tanto eles comigo quanto eu com eles, é sempre visando o melhor. Outra
+                        característica da minha família é a "não convivência total". Não temos almoços de domingo
+                        reunindo todo mundo, embora hoje isso seja inviável, já que o irmão mais velho mora bem longe. A
+                        ausência desses momentos incomoda principalmente a minha mãe, mas meus irmãos, meu pai e eu não
+                        nos importamos tanto com isso. Sentimos saudades uns dos outros, mas cada um tem sua vida, suas
+                        responsabilidades e, muitas vezes, não é possível estarmos juntos.
+                    </p>
+
+                    <p>
+                        Dentre todas as coisas que minha família me proporcionou ou me transmitiu, provavelmente a mais
+                        impactante, que não era uma obrigação como a escola, foi a igreja e, consequentemente, a fé.
+                        Todos os membros da minha família já atuaram ou ainda atuam de forma intensa na igreja. Apesar
+                        de nenhum de nós seguir à risca tudo o que a doutrina católica ensina, muito porque entendemos
+                        que a igreja é um apoio para aquilo que buscamos alcançar, também observamos muitas falhas. Hoje
+                        sou um defensor fervoroso do catolicismo, porém, se alguém quiser falar mal da Igreja na Idade
+                        Média, conte comigo. Não sou uma pessoa que tenta distorcer a narrativa para apagar esses fatos.
+                    </p>
+                </div>
+
+                <div class="pull-quote">
+                    "Dos bens que herdei, o principal não é o material, e sim a capacidade de desenvolver um senso
+                    crítico e aceitar a divergência do outro."
+                </div>
+
+                <div class="text-block">
+                    <p>
+                        Com o tempo, passei a entender que o termo família pode ser tão complexo quanto o termo "Ser".
+                        Afinal, o que define uma família? A minha não está definida apenas pelos meus laços genéticos.
+                        Nela entram amigos, minha namorada e pessoas de confiança, pois, muitas vezes, aqueles com quem
+                        compartilhamos vínculos genéticos não são, necessariamente, nossa verdadeira família.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ESCOLA -->
+        <section class="section section-alt" id="escola">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">02</div>
+                    <h2 class="section-title">Escola & Formação</h2>
+                    <p class="section-sub">Período enriquecedor e problemático. Talvez poucos ensinamentos sejam maiores
+                        do que uma vida inteira de educação pública.</p>
+                </div>
+
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-period">Ensino Fundamental & Médio</div>
+                            <h3 class="timeline-title">Onde o caldo engrossa um pouco</h3>
+                            <p>
+                                No período do Ensino Fundamental, foi tudo dentro da normalidade: notas boas, alguns
+                                casos isolados de racismo (infelizmente, pessoas pretas como eu acabam normalizando isso
+                                com o tempo). Meu desempenho nas fases iniciais do ensino gerou uma das frases mais
+                                marcantes para a minha mãe: "Mãe, eu não encosto em um livro até terminar a escola. Meu
+                                cérebro vai me carregar". Acredito, hoje, que talvez essa não tenha sido a melhor
+                                decisão, mas a situação do "gênio natural" gera uma distorção da realidade. O que
+                                consegui fazer, graças a Deus, foi nunca mudar quem eu era por causa do desempenho
+                                acadêmico. Para mim, aquilo nunca alterou em nada a forma como eu via os outros. Eu
+                                entendia que, às vezes, quando ficava chateado com um 7,0, aquela poderia ser a nota que
+                                outra pessoa mais desejava alcançar. Essa é uma das coisas que mais me incomodaram ao
+                                longo do período escolar e ainda hoje, na faculdade. Sinto que, por vezes, alguém
+                                comenta a própria nota em tom de menosprezo, quando, para outra pessoa, aquela mesma
+                                nota representa um objetivo. Eu não quero ser esse tipo de pessoa.
+                            </p>
+
+                            <p>
+                                Nesse período também nasceu o apelido "Firmino", que surgiu de uma brincadeira entre
+                                alguns amigos. Havia uma garota que gostava de mim, e eu achava ela legal, mas nunca
+                                chegamos a ficar. Em um determinado dia, parecia que minha cabeça ia explodir durante
+                                uma aula vaga. A turma inteira estava reunida de um lado da sala, enquanto eu permaneci
+                                sozinho do outro por causa do barulho. Essa garota, cujo sobrenome era Firmino,
+                                sentou-se ao meu lado. Nem chegamos a conversar. Porém, quando um amigo olhou para trás
+                                e a viu sentada na carteira ao lado da minha, teve o seu momento de glória e começou a
+                                gritar: "O Filipe tá com a Firmino!". Meu pico de raiva momentâneo, esperado para alguém
+                                do sexto ano, acabou ajudando a eternizar a brincadeira. Posteriormente, a própria
+                                garota passou a me chamar de Firmino, assim como sua irmã gêmea e sua prima, que
+                                estudavam na mesma escola. O apelido acabou ficando, a ponto de, certa vez, eu receber
+                                uma advertência em que, no lugar do meu nome, estava escrito "Firmino". Tirando as duas
+                                vezes em que quase morri por problemas decorrentes da escola, foi tudo dentro da
+                                normalidade.
+                            </p>
+
+                            <p>
+                                Mas, no Ensino Médio, as coisas começaram a "azedar". Não por causa das notas, pois isso
+                                sempre esteve praticamente garantido, mas pelos relacionamentos com as outras pessoas.
+                                Uma das frases que mais repito dentro do campus é: "Eu odeio adolescente", porque, em
+                                certo momento, eu fui parecido, e hoje entendo o quanto algumas das minhas ações
+                                incomodavam os outros. Ainda no próprio Ensino Médio, trabalhei para me tornar "adulto"
+                                o mais rápido possível.
+                            </p>
+
+                            <p>
+                                Nessa fase, que começou após a pandemia, muitas coisas aconteceram ao mesmo tempo. Os
+                                relacionamentos amorosos começaram, e os meus vieram mais tarde quando comparados aos
+                                dos meus colegas de classe. Não por insegurança ou medo, mas simplesmente porque eu
+                                queria jogar bola, voltar para casa e ficar na resenha. No Ensino Médio, é comum que as
+                                pessoas passem a se importar mais com a opinião alheia, e isso fez com que eu tomasse
+                                decisões certas, mas também muitas decisões equivocadas.
+                            </p>
+
+                            <p>
+                                Talvez meu principal erro nesse período tenha sido participar demais das atividades da
+                                escola. Ao fim do primeiro ano, fui eleito membro do colegiado, mesmo sem querer me
+                                candidatar. Acabei aceitando por incentivo da minha professora de Matemática da época,
+                                que, no ano seguinte, tornou-se diretora. Tive uma votação bastante favorável; se não me
+                                engano, mais de 90% dos alunos aptos a votar participaram da minha eleição, sendo que
+                                apenas estudantes acima de 14 anos podiam votar. Nem eu imaginava que tanta gente me
+                                conhecia, mas o problema por trás disso era bem maior.
+                            </p>
+
+                            <p>
+                                Quando me apresentava aos membros da diretoria, coordenação e supervisão, fazia questão
+                                de deixar claro que eu não era o aluno "perfeito" — aquele que faz tudo o que o
+                                professor pede, não fala durante a aula e leva os estudos totalmente a sério. Eu
+                                representava muito mais a maioria dos alunos, talvez apenas com uma média um pouco
+                                maior. Também matava aula de vez em quando, falava alto e me distraía no celular. Acho
+                                que isso fez com que muitos alunos me abraçassem, enquanto alguns membros da
+                                administração passassem a me detestar.
+                            </p>
+
+                            <p>
+                                Como membro do colegiado, vivi situações muito boas, mas também bastante tensas. A
+                                principal delas foi precisar justificar para dois pais por que eu defendia a expulsão
+                                dos filhos deles da escola. Também houve uma ocasião em que ameacei um garoto porque ele
+                                mantinha, sem o consentimento delas, fotos de várias garotas da escola armazenadas em
+                                seu Google Drive. A situação quase escalou para algo mais sério, pois a direção não
+                                tomou nenhuma providência, e o castigo aplicado pela mãe foi apenas retirar o videogame
+                                dele (um marmanjo de 15 ou 16 anos na época). Decidimos intimidá-lo. Provavelmente essa
+                                foi a minha atitude menos louvável, mas não me arrependo dela.
+                            </p>
+
+                            <p>
+                                Também já fui chamado pela coordenadora e pela supervisora (eu era amigo da diretora, e
+                                elas não se davam bem), que me fizeram a seguinte pergunta: "Firmino (nunca usavam meu
+                                nome, rsrs), o que você quer da escola? O que você quer na escola?". Parecia que eu era
+                                o Jimmy, do jogo Bully, da Rockstar, que no final da história assume o "controle" da
+                                escola. Provavelmente fui o único aluno levado à supervisão porque disse que pretendia
+                                me transferir de escola e, curiosamente, fui orientado a não fazer isso.
+                            </p>
+
+                            <p>
+                                Em determinado momento, cheguei a dar tutoria para diversas turmas em diferentes
+                                matérias, como Português, Matemática, Física, Informática, entre outras. Ajudei a
+                                planejar e executar vários projetos escolares, fui host de um podcast e participei de
+                                diversas outras iniciativas.
+                            </p>
+
+                            <p>
+                                As maiores alegrias que tive no Ensino Médio foram o fortalecimento de uma amizade, que
+                                hoje é o meu melhor amigo, e conhecer a minha namorada, com quem espero passar o resto
+                                da minha vida. No geral, sinto que assumi responsabilidades demais nessa fase. Foram
+                                muitas noites perdidas organizando materiais e tentando conciliar o curso técnico com o
+                                trabalho. Hoje penso que talvez tivesse sido melhor permanecer anônimo, porque muita
+                                gente me conhece: algumas pessoas gostam de mim, outras não. Às vezes, acho que teria
+                                sido melhor passar despercebido.
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker marker-accent"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-period">SENAC</div>
+                            <h3 class="timeline-title">Certificação em Operação de Computadores</h3>
+                            <p> Um período no Senac foi bastante valioso, porque foi quando comecei a ter contato com
+                                pessoas de faixas etárias diferentes da minha, mas que tinham o mesmo objetivo. Isso me
+                                ajudou a entender como essas pessoas levavam a vida e a perceber um pouco das diferenças
+                                na realidade de cada uma. </p>
+                            <p> Também comecei a compreender melhor como lidar com relações de amizade e convivência, já
+                                que nem sempre alguém que compartilha uma ideia conosco é igual a nós — até porque
+                                acredito que ninguém seja totalmente igual a ninguém. Esse contato com outras pessoas,
+                                mesmo em um curso relativamente curto, de seis meses em 2022, foi importante. </p>
+                            <p> Ali começou o meu desenvolvimento técnico na área de tecnologia, então foi um período
+                                bem produtivo. Foi bom também como uma espécie de válvula de escape, já que eu estava
+                                passando por momentos difíceis em relação aos relacionamentos na escola. No fim, acabou
+                                sendo algo positivo. </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker marker-warm"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-period">SENAI</div>
+                            <h3 class="timeline-title">Técnico em Desenvolvimento de Sistemas</h3>
+                            <p> Já no técnico do SENAI foi algo um pouco mais divergente, pode-se dizer, porque foi um
+                                período de cerca de um ano e cinco meses — deveria ser um ano e seis meses, mas acabou
+                                sendo um pouco diferente. </p>
+                            <p> Era um curso presencial, então, por um período, eu saía da escola por volta do meio-dia,
+                                ia para o trabalho e seguia em período integral. Eu não deveria sair da escola naquele
+                                horário, mas ia direto para o trabalho e ficava até às 17h. Eu já trabalhava com
+                                desenvolvimento de software nesse período. Depois, às 18h da noite, eu ia para o SENAI
+                                para poder fazer o curso. </p>
+                            <p> Esse curso foi muito importante para mim, tanto em termos de conhecimento quanto em
+                                relação às pessoas. Ele foi vital para o meu amadurecimento. Se eu fosse separar meu
+                                desenvolvimento ao longo, principalmente, do Ensino Médio, eu diria que entrei no SENAI
+                                como uma pessoa e saí como outra completamente diferente. </p>
+                            <p> O SENAI também foi um dos períodos que me ajudou a entender com o que eu queria
+                                trabalhar. Quando fiz o curso de Desenvolvimento de Sistemas,
+                                isso aconteceu muito por orientação da minha mãe e também do meu irmão, que na época já
+                                não morava comigo. Ele me incentivou a fazer esse tipo de curso, e minha mãe também
+                                queria que eu não ficasse parado. </p>
+                            <p> Com o tempo, o SENAI me mostrou que era exatamente aquilo que eu queria seguir. Foi ali
+                                que também comecei a perceber, de forma mais clara, a minha paixão por ensinar. Na
+                                verdade, esse interesse pelo ensino já existia desde a escola, no final do ensino
+                                fundamental — especialmente no sétimo ano, já que o oitavo e o nono acabaram sendo
+                                afetados pela pandemia. Mesmo assim, já naquela época eu gostava de ajudar e explicar
+                                coisas para outras pessoas. </p>
+                            <p> No SENAI, essa relação com a computação ficou ainda mais forte, e também surgiu a
+                                vontade de me tornar professor na área. Um professor em especial teve um papel muito
+                                importante nisso: o professor Isaac. Hoje ele não leciona mais lá, mas foi uma das
+                                pessoas com o maior coração que já conheci. Ele foi quem me fez me apaixonar pelo ensino
+                                tecnológico. </p>
+                            <p> A forma como ele ensinava, a paciência que tinha, o jeito de explicar e a maneira como
+                                conduzia o curso marcaram muito a minha formação. Ele foi nosso principal professor,
+                                ainda mais depois que outros acabaram saindo. Tudo isso fez uma diferença enorme na
+                                experiência. </p>
+                            <p> A ponto de ele não estar presente na nossa formatura, pois havia se mudado para Curitiba
+                                para lecionar no Instituto Federal do Paraná. Mesmo assim, ele enviou um vídeo no dia da
+                                formatura. E aquilo marcou muito: havia pessoas de todas as idades na turma — jovens e
+                                adultos — e muitas delas ficaram emocionadas ao ouvi-lo dizendo que estava orgulhoso de
+                                nós. </p>
+                            <p>Acredito que os amigos que fiz lá também me ajudaram bastante, pois, em dias difíceis, eu
+                                só queria chegar lá e rir um pouco.</p>
+                            <p> Isso mostra o quanto ele foi importante na minha formação. Muito do que sou hoje, tanto
+                                tecnicamente quanto como pessoa, passa diretamente pela influência dele. </p>
+                            <div class="highlight-box">
+                                Foi no SENAI que meu sonho profissional ficou claro.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker marker-accent"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-period">IF Sudeste MG — Campus Juiz de Fora</div>
+                            <h3 class="timeline-title">Bacharelado em Sistemas de Informação</h3>
+                            <p> Aqui no IF tem sido algo um pouco diferente do que eu vivi no SENAI, principalmente
+                                porque ainda estou em processo de desenvolvimento dentro do curso. Ao longo do IF, estou
+                                tendo uma noção maior de como lidar com as pessoas e com os problemas que cada um
+                                carrega no dia a dia. </p>
+                            <p> No SENAI, como todo mundo chegava mais cansado à noite, não havia tanto espaço para
+                                compartilhar como era a vida de cada um. Já no IF, como passo muito tempo do dia com
+                                meus colegas de turma — muitas vezes mais do que com as pessoas com quem trabalho, já
+                                que hoje trabalho remotamente — isso acaba se tornando quase uma segunda família. </p>
+                            <p> Como mencionei antes, nenhuma convivência é perfeita. Nem tudo é harmonia o tempo todo.
+                                Algumas coisas que vejo colegas fazendo me incomodam, assim como imagino que algumas das
+                                minhas atitudes também incomodem outras pessoas. Ainda assim, gosto muito de conversar
+                                com a turma e de poder brincar um pouco no dia a dia, porque existe também uma pressão
+                                constante ao longo do semestre para que tudo dê certo no final. </p>
+                            <p> Mesmo assim, acredito que esse momento é muito importante para mim. Hoje consigo viver
+                                uma descontração que ainda se mantém dentro de um ambiente profissional. No SENAI,
+                                apesar de já existir uma base profissional no curso, eu ainda não me via completamente
+                                como um “adulto formado”, embora ainda esteja em processo de formação. </p>
+                            <p> Aqui no IF, essa percepção de responsabilidades individuais ficou mais clara. As coisas
+                                passam a ser tratadas com mais maturidade, quase como em um ambiente de empresa. E isso
+                                é importante, porque mostra que nem todo lugar de trabalho precisa ser um ambiente ruim
+                                para que haja produtividade. Já estive em lugares com ambientes muito difíceis e alta
+                                produtividade, e isso me fez questionar se era necessário ser uma pessoa mais fechada ou
+                                mais acelerada para produzir. </p>
+                            <p> Dentro do IF, estou entendendo melhor que as coisas podem ser diferentes e, ainda assim,
+                                funcionarem bem. Isso tem sido muito gratificante, inclusive no contato com outras
+                                pessoas e no entendimento do meu próprio lugar na sociedade. </p>
+                            <p> Talvez isso não tenha ficado tão claro ao longo dos textos, mas eu me considero uma
+                                pessoa mais alinhada à esquerda. É um tema complexo hoje em dia, porque os debates
+                                ficaram muito polarizados, mas não posso deixar de reconhecer a importância dessa visão
+                                para a minha trajetória. </p>
+                            <p> Acredito que muitas oportunidades que tive — como entrar na faculdade, meus irmãos
+                                também terem acesso ao ensino superior, e até a minha mãe estar estudando hoje — foram
+                                influenciadas por esse tipo de política de inclusão. Na minha turma, por exemplo, há
+                                pouquíssimos alunos negros, e eu sou um deles entre os homens. Isso faz refletir
+                                bastante sobre o lugar que eu ocupo. </p>
+                            <p> Inclusive, como futuro professor, eu espero um dia lecionar para turmas mais diversas,
+                                com pessoas que vêm de realidades parecidas com a minha e também de realidades
+                                diferentes. Eu sei que não foi simples chegar até aqui, e também sei que, em comparação
+                                com alguns amigos da época da escola, tive mais oportunidades do que muitos deles. </p>
+                            <p> Por isso, sinto que tenho uma responsabilidade de continuar avançando e, no futuro,
+                                poder contribuir para que outras pessoas também consigam acessar esses espaços de
+                                ensino, apesar das dificuldades que a vida impõe. </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FÉ -->
+        <section class="section" id="fe">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">03</div>
+                    <h2 class="section-title">Fé & Espiritualidade</h2>
+                    <p class="section-sub">A dimensão que não cabe em código.</p>
+                </div>
+                <div class="text-block">
+                    <p class="drop-cap"> Como eu já tava falando antes, eu sou um cara muito ligado às coisas da igreja
+                        e sempre me
+                        mantive assim. Isso me ajuda bastante a refletir sobre a vida. Às vezes eu sinto que boa parte
+                        de quem eu sou e de como eu me tornei vem também desse período que eu tô na igreja. E eu
+                        pretendo continuar indo e participando cada vez mais. </p>
+                    <p> Isso me ajudou muito a lidar com um monte de problemas que eu tive ao longo do tempo. É algo
+                        especial pra mim, sabe? Estar lá me faz bem, é algo que eu gosto e que eu não gostaria de deixar
+                        pra lá. Hoje eu sou líder de um grupo jovem, e mesmo assim às vezes eu me irrito com os
+                        adolescentes — mas faz parte. </p>
+                    <p> No geral é muito bom estar lá, compartilhar esses momentos. Eu me sinto bem mesmo. É algo que eu
+                        gosto e não pretendo deixar de lado, porque a pessoa que eu quero ser ainda tem a igreja no
+                        meio. Não que eu ache que a igreja seja necessária pra alguém ser uma pessoa boa, mas pra mim,
+                        pra eu ser quem eu quero ser, eu não me vejo fora dela. </p>
+                    <p> Apesar disso, tem muita coisa que eu discordo, como eu já falei antes. Se alguém quiser falar
+                        mal da igreja na Idade Média, pra mim tudo bem, porque foi um período bem complicado mesmo. E
+                        não dá pra negar que essas coisas aconteceram. </p>
+                    <p> Mas os princípios do cristianismo e a fé em si têm um peso muito grande na minha vida e em quem
+                        eu sou hoje. Isso acaba influenciando bastante quem eu quero me tornar. </p>
+                </div>
+                <div class="pull-quote">
+                    "É preciso compreender para crer, e crer para compreender." - Santo Agostinho (Sou fâ)
+                </div>
+            </div>
+        </section>
+
+        <!-- ACADÊMICO -->
+        <section class="section section-alt" id="academico">
+            <div class="container">
+
+                <div class="text-block">
+
+                    <p class="drop-cap">
+                        Talvez uma boa forma de descrever quem eu sou, antes mesmo de entrar no IF, passe por algo meio
+                        parecido com sistemas que eu tenho vontade de desenvolver, ou até sistemas dos quais eu já faço
+                        parte de alguma forma. Hoje eu me vejo como alguém tecnicamente preparado para o estágio em que
+                        estou, já atuando com engenharia e desenvolvimento de software. E, sinceramente, às vezes eu
+                        sinto que já era pra eu estar só me preparando pra um estágio e não já trabalhando.
+                    </p>
+
+                    <p>
+                        Eu já tenho um certo tempo de experiência na área, mas o que me coloca um pouco à frente não é
+                        só a parte prática. É muito essa vontade constante de pesquisar, de participar, de ir atrás das
+                        coisas. Essa curiosidade sempre me puxou muito.
+                    </p>
+
+                    <p>
+                        Eu também penso bastante que sistemas, assim como IAs, nunca são totalmente neutros. Sempre
+                        existe alguma parcialidade, porque alguém construiu, alguém decidiu, alguém financiou. E comigo
+                        não é diferente. Os sistemas que eu desenvolvo também acabam carregando minhas escolhas, minhas
+                        preferências e meu jeito de ver as coisas. Isso meio que é inevitável.
+                    </p>
+
+                    <p>
+                        Talvez por isso eu gosto de falar dos sistemas que mais me marcaram até hoje, principalmente
+                        depois que entrei no IF e também por conta do trabalho. Um deles foi um processador de vídeo que
+                        eu desenvolvi, que acabou sendo bem interessante de construir. Ali eu tive uma noção bem clara
+                        de que ainda tenho muita coisa pra aprender. Tem muita coisa nesse nível de software que ainda é
+                        nova pra mim, e isso te coloca num lugar meio estranho, onde você percebe que ainda não sabe bem
+                        “onde começa o próximo nível”.
+                    </p>
+
+                    <p>
+                        Outro projeto que foi bem importante foi um sistema de recomendação de viagens, feito pra uma
+                        disciplina de desenvolvimento web. Ele integrava um modelo de IA e acabou sendo o maior projeto
+                        que eu já entreguei no IF até agora. Foi um projeto grande, que na prática era coisa pra uma
+                        equipe inteira, mas eu fiz sozinho ao longo de alguns meses. Mesmo assim, foi muito gratificante
+                        ver funcionando, testar ideias de arquitetura e chegar no resultado final.
+                    </p>
+
+                    <p>
+                        Fora isso, tem algo que também me define bastante: o hábito de ler e de tentar entender as
+                        coisas com profundidade. Não só na tecnologia, mas também em áreas como história e filosofia. Eu
+                        gosto desse tipo de reflexão mais ampla, que envolve texto, raciocínio e interpretação.
+                    </p>
+
+                    <p>
+                        Um dos livros que mais me marcou foi “Arquitetura Limpa”, do Robert C. Martin (Clean
+                        Architecture). Ele não me ensinou só parte técnica, mas também mudou a forma como eu penso sobre
+                        trabalho em equipe, responsabilidade e tomada de decisão. Esse tipo de livro mais voltado pra
+                        arquitetura de software acaba indo além do código, ele também influencia comportamento
+                        profissional.
+                    </p>
+
+                    <p>
+                        Eu acho interessante como esse tipo de conhecimento é transmitido. Não são livros de baixo
+                        nível, tipo sistemas operacionais ou coisas muito profundas de hardware. São livros mais de alto
+                        nível de software, que ajudam a entender como pensar, como organizar ideias e até como se portar
+                        como profissional.
+                    </p>
+
+                    <p>
+                        Isso tem me ajudado muito até aqui, e eu espero conseguir levar isso pro futuro, talvez até pra
+                        docência, que é algo que eu ainda penso com carinho.
+                    </p>
+
+                    <p>
+                        Então, no fim, talvez um pouco da minha parte acadêmica seja isso: um misto de prática,
+                        curiosidade, reflexão e essa vontade constante de entender como as coisas funcionam e como elas
+                        poderiam funcionar melhor.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+        <!-- RELACIONAMENTOS -->
+        <section class="section" id="relacionamentos">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag">05</div>
+                    <h2 class="section-title">Relacionamentos</h2>
+                    <p class="section-sub">O que os outros revelam sobre nós.</p>
+                </div>
+                <div class="text-block">
+                    <p class="drop-cap">
+                        Eu tive alguns relacionamentos ao longo do ensino médio, principalmente amorosos, e agora na
+                        faculdade. Graças a Deus, estou desde o ensino médio com a minha atual namorada, e espero estar
+                        com ela até o fim dos meus dias, dela e dos meus.
+                    </p>
+
+                    <p>
+                        Esses relacionamentos me ensinaram muito, porque eu entendi que eu precisava impor limites,
+                        saber até onde eu podia ir e até onde eu me sentia confortável. Isso vale tanto para
+                        relacionamentos amorosos quanto para amizades. Mas isso ficou mais claro no amoroso, porque às
+                        vezes eu me sentia mal ou até um pouco invadido por atitudes das minhas namoradas. Acho que
+                        também teve um pouco de inocência e até uma certa imaturidade de adolescente em não saber
+                        colocar limites nas coisas.
+                    </p>
+
+                    <p>
+                        Isso acabou me ajudando a entender quem eu sou hoje, e qual é o meu limite. Antes, talvez eu até
+                        impunha limites que nem eu mesmo concordava tanto, só por comodidade. Hoje eu entendo melhor
+                        isso, e também entendo que as outras pessoas têm limites. A forma de lidar com essas pessoas
+                        também me fez pensar bastante em como eu gostaria que fosse um relacionamento.
+                    </p>
+
+                    <p>
+                        Não foi fácil. Eu não me vejo como alguém perfeito nessas histórias de relacionamento. Mas eu
+                        tentei me esforçar, e algumas coisas não deram certo. Ainda assim, acredito que foi importante,
+                        não só porque hoje estou em um relacionamento melhor, mas porque isso me fez crescer como
+                        pessoa.
+                    </p>
+
+                    <p>
+                        Eu aprendi muito com isso. Aprendi com amigos também, mas principalmente a dizer não, que talvez
+                        seja uma das coisas mais difíceis quando você se relaciona com alguém. Muitas vezes a gente não
+                        diz não para pessoas de fora, mas diz menos ainda para quem está perto, e isso pode fazer mal.
+                    </p>
+
+                    <p>
+                        Tem gente que prefere não falar sobre isso e diz que teria sido melhor não ter vivido certos
+                        relacionamentos. Hoje, se eu pudesse voltar no tempo com a maturidade que eu tenho, talvez eu
+                        dissesse que teria sido melhor esperar mais. Mas isso não é algo que dá para mudar. No fim, acho
+                        que foi importante passar por tudo isso, porque me fez aprender e me tornou uma pessoa melhor em
+                        vários sentidos, como namorado, como amigo e como pessoa.
+                    </p>
+
+                    <p>
+                        Todo relacionamento, mesmo com altos e baixos, teve um papel importante nesse desenvolvimento.
+                    </p>
+                </div>
+                <div class="pull-quote">
+                    "O outro não é apenas companhia. É o espelho mais honesto que existe —
+                    e o mais difícil de encarar."
+                </div>
+            </div>
+        </section>
+
+        <!-- VISÃO -->
+        <section class="section section-dark" id="visao">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-tag section-tag-light">06</div>
+                    <h2 class="section-title section-title-light">Quem eu sou?</h2>
+                    <p class="section-sub section-sub-light">O que me move e para onde estou indo.</p>
+                </div>
+                <div class="text-block text-block-light">
+                    <p class="drop-cap">
+                        Falando por fim, acho que isso também responde um pouco da pergunta de quem eu sou e como eu me
+                        vejo. Esse memorial, no fim, é o que me tornou quem eu sou hoje. A descrição que deixei acima já
+                        mostra algumas das coisas que me moldaram, mesmo sem dar para listar tudo.
+                    </p>
+
+                    <p>
+                        Hoje eu me vejo como uma pessoa talvez um pouco problemática para lidar com coisas simples do
+                        dia a dia. Não me vejo com tantas qualidades, mas ainda assim gosto de quem eu sou no geral. Eu
+                        não sou uma pessoa tão comunicativa, mas sou uma pessoa proativa. Então, em muitos casos, minhas
+                        ações valem mais do que as minhas palavras.
+                    </p>
+
+                    <p>
+                        E acredito que isso seja verdade mesmo, que no fim as ações falam mais do que o que a gente diz.
+                        Ao mesmo tempo, talvez eu seja um pouco negligente com algumas coisas minhas, principalmente com
+                        saúde, vida pessoal e até planejamento financeiro de longo prazo. Isso acaba preocupando pessoas
+                        próximas a mim, como minha namorada e minha mãe.
+                    </p>
+
+                    <p>
+                        Mesmo assim, eu não me sinto mal em ajudar os outros primeiro. Às vezes eu acabo deixando minhas
+                        próprias coisas de lado, mas isso não me causa um sentimento ruim direto. Talvez seja uma
+                        característica minha mesmo, algo que eu ainda estou aprendendo a equilibrar.
+                    </p>
+
+                    <p>
+                        Eu também não sou uma pessoa tão comunicativa para me abrir com qualquer pessoa, mas no ensino
+                        médio isso começou a mudar um pouco. Eu passei a me enxergar de forma diferente, principalmente
+                        porque perdi a confiança em algumas pessoas ao longo do tempo. Ao mesmo tempo, também entendi
+                        que outras pessoas podiam confiar em mim, e vinham falar comigo quando tinham problemas.
+                    </p>
+
+                    <p>
+                        No geral, eu me vejo como uma pessoa tranquila. Claro que a vida tira essa calmaria às vezes,
+                        isso é normal. Recentemente, por exemplo, eu fui muito afetado por uma situação envolvendo
+                        chuvas e perdas na cidade. Isso mexeu bastante comigo, tanto emocionalmente quanto na forma de
+                        ver as coisas.
+                    </p>
+
+                    <p>
+                        Foram momentos difíceis, em que questões pessoais e familiares também vieram à tona. A gente
+                        teve que se apoiar muito dentro de casa, não só para lidar com o que estava acontecendo, mas
+                        também para aguentar o impacto de ver tanta gente sofrendo ao mesmo tempo.
+                    </p>
+
+                    <p>
+                        Isso me fez questionar muitas coisas, inclusive sobre a própria vida e o sentido de estar aqui,
+                        enquanto outras pessoas não estavam. Foi algo pesado e que ainda me afeta em alguns momentos,
+                        mas que também acabou me moldando de alguma forma.
+                    </p>
+
+                    <p>
+                        Acho que tudo isso influencia quem eu sou hoje, inclusive no trabalho e no que eu posso vir a
+                        ser no futuro, talvez como professor, se isso se concretizar. São experiências que acabam
+                        moldando a forma como eu vejo o mundo e como eu ajo nele.
+                    </p>
+
+                    <p>
+                        No fim, acho que esse é o retrato de quem eu sou: um pouco de Firmino, um pouco de Felipe, um
+                        pouco de Lipe. Cada um desses nomes representa fases diferentes da minha vida, desde a infância
+                        até o desenvolvimento como pessoa e como desenvolvedor.
+                    </p>
+
+                    <p>
+                        Tudo isso, no conjunto, é o que eu acredito que eu sou hoje.
+                    </p>
+                </div>
+                <div class="vision-pillars">
+                    <div class="pillar">
+                        <div class="pillar-icon">◎</div>
+                        <h4>Ensinar</h4>
+                        <p>Tornar o complexo acessível, sem perder a profundidade.</p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">◈</div>
+                        <h4>Construir</h4>
+                        <p>Sistemas que importam — com rigor técnico e responsabilidade humana.</p>
+                    </div>
+                    <div class="pillar">
+                        <div class="pillar-icon">◇</div>
+                        <h4>Aprofundar</h4>
+                        <p>Nunca parar na superfície — de nenhum assunto, de nenhuma relação.</p>
+                    </div>
+                </div>
+                <div class="closing-text">
+                    <p>
+                        Este memorial não é um ponto final. É uma fotografia de um processo em
+                        andamento. Daqui a dez anos, espero olhar para ele e reconhecer a pessoa
+                        que era — com afeto, com honestidade, e com gratidão por tudo que me trouxe
+                        até lá.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <p class="footer-sig">
+                    <span class="footer-bracket">{</span>
+                    Filipe · Memorial Pessoal · 2026
+                    <span class="footer-bracket">}</span>
+                </p>
+                <p class="footer-note">IF Sudeste MG — Campus Juiz de Fora · Sistemas de Informação</p>
+            </div>
+        </footer>
+
+    </div><!-- /layout -->
+
+    <!-- MODALS -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()">✕</button>
+            <h2 class="modal-title" id="modalTitle"></h2>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
